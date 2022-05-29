@@ -7,6 +7,7 @@ import java.io.File;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
 
 public class AutomationFormTests {
@@ -40,7 +41,8 @@ public class AutomationFormTests {
 
         $("[for=hobbies-checkbox-1]").click();
         $("[id=uploadPicture]").uploadFile(new File("src\\test\\resources\\test.png"));
-        $("#subjectsInput").sendKeys("Maths");
+        $("#subjectsInput").sendKeys("m");
+        $(byText("Maths")).click();
         $("[id=currentAddress]").setValue("Palm Street");
 
         $("[id=state]").click();
@@ -48,7 +50,7 @@ public class AutomationFormTests {
 
         $("[id=city]").click();
         $(byText("Noida")).click();
-        $("#submit").click();
+        $("[id=submit]").click();
 
         $(".modal-content").shouldHave(text("Mark"),text("Born"),text("Born@gloom.snail"),
                 text("Male"),text("9500267340"),text("10 December,1988"),
