@@ -1,10 +1,7 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
-import pages.components.PictureUpload;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
 
 public class AutomationFormTests extends TestBase {
 
