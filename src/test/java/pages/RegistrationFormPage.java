@@ -72,7 +72,7 @@ public class RegistrationFormPage {
 
     public RegistrationFormPage setSubject(String value) {
         userSubject.sendKeys(value);
-        $(byText("Maths")).click();
+        userSubject.pressEnter();
         return this;
     }
 
