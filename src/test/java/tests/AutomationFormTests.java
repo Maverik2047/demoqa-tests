@@ -15,15 +15,24 @@ public class AutomationFormTests extends TestBase {
                 .setUserEmail(testData.email)
                 .setGender(testData.gender)
                 .userNumber(testData.number)
-                .setDateofBirth(testData.month, testData.year)
+                .setDateofBirth(testData.month, testData.year, testData.day)
                 .setHobby(testData.hobby)
-                .setSubject(testData.subject)
+                .setSubject("m")
                 .setPicture()
                 .setAddress(testData.address)
                 .setState(testData.state)
                 .setCity(testData.city)
                 .pressSubmit()
-                .checkResults();
+                .checkResult("Student Name", testData.name + " " + testData.lname)
+                .checkResult("Student Email", testData.email)
+                .checkResult("Gender", testData.gender)
+                .checkResult("Mobile", testData.number)
+                .checkResult("Date of Birth", testData.day + " " + testData.month + "," + testData.year)
+                .checkResult("Subjects",testData.subject)
+                .checkResult("Hobbies",testData.hobby)
+                .checkResult("Picture",testData.picture)
+                .checkResult("Address",testData.address)
+                .checkResult("State and City",testData.state+" "+testData.city);
 
 
     }

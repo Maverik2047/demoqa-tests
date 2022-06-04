@@ -59,9 +59,9 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public RegistrationFormPage setDateofBirth(String month, String year) {
+    public RegistrationFormPage setDateofBirth(String month, String year,String day) {
         userDateofBirth.click();
-        calendarComponents.setDate(month, year);
+        calendarComponents.setDate(month, year,day);
         return this;
     }
 
@@ -102,8 +102,8 @@ public class RegistrationFormPage {
         pictureUpload.setPicture();
         return this;
     }
-    public RegistrationFormPage checkResults(){
-        resultsComponents.checkResults();
+    public RegistrationFormPage checkResult(String key, String value){
+        resultsComponents.checkResult(key,value);
         return this;
     }
 }
