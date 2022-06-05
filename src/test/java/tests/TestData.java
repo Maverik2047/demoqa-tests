@@ -16,7 +16,7 @@ public class TestData {
             hobby = RandomGenerator.randomHobby(),
             month = RandomGenerator.randomMonths(),
             year = String.valueOf(faker.number().numberBetween(1900, 2000)),
-            day = String.valueOf(faker.number().numberBetween(0, 28)),
+            day = String.valueOf(faker.number().numberBetween(10, 28)),
             subject = RandomGenerator.randomSubject(),
             picture = "test.png",
             address = faker.address().streetAddress(),

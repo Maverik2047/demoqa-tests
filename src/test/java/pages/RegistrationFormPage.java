@@ -98,8 +98,8 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public RegistrationFormPage setPicture() {
-        pictureUpload.setPicture();
+    public RegistrationFormPage setPicture(String value) {
+        pictureUpload.setPicture(value);
         return this;
     }
     public RegistrationFormPage checkResult(String key, String value){
